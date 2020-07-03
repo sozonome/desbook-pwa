@@ -1,0 +1,16 @@
+{
+  "name": "Fun Design Book",
+  "short_name": "Fun Design",
+  "description": "Design Resources and Inspirations bookmarks",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#e64a19",
+  "theme_color": "#e64a19",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

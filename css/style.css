@@ -1,0 +1,16 @@
+
+@media screen and (min-width:600px){
+  .img-wrapper{
+    width: 80%;
+  }
+}
+@media screen and (min-width:900px){
+  .img-wrapper{
+    width: 60%;
+  }
+}
+@media screen and (min-width:1200px){
+  .img-wrapper{
+    width: 50%;
+  }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Designer's Bookmarks</title>
+
+    <!-- Materialize -->
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#e64a19"/>
+  </head>
+  <body>
+    <header>
+      <!-- Nav -->
+      <nav class="deep-orange darken-2 nav-extended">
+        <div class="nav-wrapper container">
+          <a href="/" class="brand-logo">
+            <img src="images/icons8-design-48.png" />
+          </a>
+        </div>
+        <div class="nav-content container">
+          <ul class="pagenav tabs tabs-transparent"></ul>
+        </div>
+      </nav>
+      <!-- End Nav -->
+    </header>
+
+    <div class="container" id="page-content"></div>
+
+    <script src="js/materialize.min.js"></script>
+    <script src="js/navigation.js"></script>
+
+    <script>
+      // REGISTER SERVICE WORKER
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function() {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then(function() {
+              console.log("Pendaftaran ServiceWorker berhasil");
+            })
+            .catch(function() {
+              console.log("Pendaftaran ServiceWorker gagal");
+            });
+        });
+      } else {
+        console.log("ServiceWorker belum didukung browser ini.");
+      }
+    </script>
+  </body>
+</html>
