@@ -50,14 +50,14 @@
           navigator.serviceWorker
             .register("/service-worker.js")
             .then(function() {
-              console.log("Pendaftaran ServiceWorker berhasil");
+              console.log("ServiceWorker register successful");
             })
             .catch(function() {
-              console.log("Pendaftaran ServiceWorker gagal");
+              console.log("ServiceWorker register fail");
             });
         });
       } else {
-        console.log("ServiceWorker belum didukung browser ini.");
+        console.log("ServiceWorker are not supported in this browser.");
       }
     </script>
   </body>
